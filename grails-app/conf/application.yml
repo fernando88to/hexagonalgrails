@@ -63,4 +63,4 @@ hibernate:
 
 
 meuServico:
-  tipo: 'B' # Pode ser 'A' ou 'B'
+  tipo: 'A' # Pode ser 'A' ou 'B'

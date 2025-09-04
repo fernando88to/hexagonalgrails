@@ -2,16 +2,21 @@ package com.fernando.services.implementations
 
 import com.fernando.NomeService
 import com.fernando.services.MeuServico
+import grails.compiler.GrailsCompileStatic
 import groovy.util.logging.Slf4j
-import org.springframework.beans.factory.annotation.Autowired
 
-
-
+@GrailsCompileStatic
 @Slf4j
 class MeuServicoImplA implements MeuServico {
 
-    @Autowired
+//    @Autowired
+//    NomeService nomeService
+//      usei pelo construtor
     NomeService nomeService
+
+    MeuServicoImplA(NomeService nomeService) {
+        this.nomeService = nomeService
+    }
 
     @Override
     String executar() {
